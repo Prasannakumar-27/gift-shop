@@ -157,4 +157,8 @@ body {
         padding: 0.5rem 1rem; /* Adjust button size */
         font-size: 1rem; /* Adjust font size */
     }
+    .navbar {
+        padding: 2rem 0;
+        font-size: 1.5rem;
+    }
 }
