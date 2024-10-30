@@ -46,6 +46,8 @@ function clearCart() {
     alert("Your cart has been cleared.");
 }
 
+
+
 // Update the cart count on page load
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("cart-count").textContent = cart.length;
