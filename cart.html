@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Lilly's Gift Shop</title>
+    <link rel="stylesheet" href="cart-style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header class="cart-header">
+        <h1>Your Cart</h1>
+        <a href="index.html" class="back-button">Back to Shop</a>
+    </header>
+
+    <section class="cart-section">
+        <h2>Items in Your Cart</h2>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-total">
+            <h3>Total: $<span id="total-amount">0</span></h3>
+            <button onclick="clearCart()" class="clear-cart-button">Clear Cart</button>
+            <button onclick="checkout()" class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <script>
+        // Retrieve cart from local storage or initialize an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Function to display cart items
+        function displayCart() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+            cartItemsDiv.innerHTML = ''; // Clear existing items
+            cart.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.textContent = `${item.item} - $${item.price}`;
+                cartItemsDiv.appendChild(itemDiv);
+            });
+        }
+
+        // Function to clear the cart
+        function clearCart() {
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
+            displayCart(); // Refresh the display
+        }
+
+        // Display cart items on page load
+        displayCart();
+    </script>
+</body>
+</html>

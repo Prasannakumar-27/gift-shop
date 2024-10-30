@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Gift Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <h1>Welcome to Lilly's Gift Shop</h1>
+        <p>Find the perfect gift for every occasion</p>
+        <a href="#products" class="cta-button">Shop Now</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <a href="#products">Products</a>
+        <a href="contact.html">Contact Us</a>
+        <button id="cart-button" onclick="location.href='cart.html'" style="margin-left:auto;">Cart (<span id="cart-count">0</span>)</button>
+
+    </nav>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <h2>Our Featured Products</h2>
+        <div class="product-grid">
+            <!-- Sample Products -->
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/wallet.jpg" alt="wallet" class="product-image">
+                    <h3>Wallet</h3>
+                    <p>₹550</p>
+                </div>
+                <button onclick="addToCart('wallet', 550)">Add to Cart</button>
+            </div>
+            
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/sipper bottel.jpg" alt="slipper bottel">
+                    <h3>Slipper Bottel</h3>
+                    <p>₹450</p>
+                </div>
+                <button onclick="addToCart('slipper bottel', 15)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/alarm clock.jpg" alt="alarm clock">
+                    <h3>Alarm Clock</h3>
+                    <p>₹500</p>
+                </div>
+                <button onclick="addToCart('alarm clock', 20)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/bike keychain.jpg" alt="bike keychain">
+                    <h3>Bike Keychain</h3>
+                    <p>₹200</p>
+                </div>
+                <button onclick="addToCart('bike keychain', 12)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/binded album.jpg" alt="binded album">
+                    <h3>Binded Album</h3>
+                    <p>₹500</p>
+                </div>
+                <button onclick="addToCart('binded album', 18)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/caricature key chain.jpg" alt="caricature key chain">
+                    <h3>Caricature Key Chain</h3>
+                    <p>₹200</p>
+                </div>
+                <button onclick="addToCart('caricature key chain', 22)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/Couple pillow heart.jpg" alt="couple pillow heart">
+                    <h3>Couple Pillow Heart</h3>
+                    <p>₹800</p>
+                </div>
+                <button onclick="addToCart('couple pillow heart', 22)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/Engraving pen.jpg" alt="engraving pen">
+                    <h3>Engraving Pen</h3>
+                    <p>₹190</p>
+                </div>
+                <button onclick="addToCart('engraving pen', 22)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/explosion box.jpg" alt="explosion box">
+                    <h3>Explosion Box</h3>
+                    <p>₹299</p>
+                </div>
+                <button onclick="addToCart('explosion box', 22)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/flip flop -material rubber.jpg" alt="flip flop -material rubber">
+                    <h3>Flip Flop - -Material(Rubber)</h3>
+                    <p>₹450</p>
+                </div>
+                <button onclick="addToCart('flip flop =-material rubber', 25)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/shadow box.jpg" alt="shadow box">
+                    <h3>Shadow Box</h3>
+                    <p>₹800</p>
+                </div>
+                <button onclick="addToCart('shadow box', 30)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/Resin keychain.jpg" alt="resin keychain">
+                    <h3>Resin Keychain</h3>
+                    <p>₹250</p>
+                </div>
+                <button onclick="addToCart('resin keychain', 35)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/puzzle.jpg" alt="puzzle">
+                    <h3>Puzzle</h3>
+                    <p>₹300</p>
+                </div>
+                <button onclick="addToCart('puzzle', 40)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/normal mug.jpg" alt="normal mug">
+                    <h3>Normal Mug</h3>
+                    <p>₹300</p>
+                </div>
+                <button onclick="addToCart('normal mug', 45)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/Name flip.jpg" alt="name flip">
+                    <h3>Name Flip</h3>
+                    <p>₹70(Per letter)</p>
+                </div>
+                <button onclick="addToCart('name flip', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/Led bottle.jpg" alt="led bottle">
+                    <h3>Led Bottle</h3>
+                    <p>₹500</p>
+                </div>
+                <button onclick="addToCart('led bottle', 55)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/jumping box.jpg" alt="jumping box">
+                    <h3>Jumping Box</h3>
+                    <p>₹700</p>
+                </div>
+                <button onclick="addToCart('jumping box', 60)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <div class="product-content">
+                    <img src="product_items/4d Mobile case.jpg" alt="4d mobile case" >
+                    <h3>4D Mobile Case</h3>
+                    <p>₹250</p>
+                </div>
+                <button onclick="addToCart('4d mobile case', 65)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

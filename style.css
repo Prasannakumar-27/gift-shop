@@ -1,0 +1,258 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('hero-bg.jpg'); /* Replace with your desired image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+
+
+.hero-section h1 {
+    font-size: 3.5rem; /* Larger font size */
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+    background-color: #e5554f;
+    padding: 1.5rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300; /* Lighter font weight */
+    text-shadow: 1px 1px 3px rgba(1, 0, 0, 0.5);
+    -webkit-text-fill-color: black;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 1.2rem; /* Slightly larger font for the button */
+}
+
+.cta-button:hover {
+    background-color: #e5554f;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem;
+    padding-left: 40%;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ff6f61;
+}
+
+/* Products Section */
+.products-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    height: auto;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+    height: 500px; /* Remove fixed height for flexibility */
+    gap: 60px;
+    padding: 60px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 1rem;
+    text-align: center;
+    aspect-ratio: 4 / 3; /* Maintain a 5:3 aspect ratio */
+    width: 100%; /* Set to 100% of the parent container */
+    max-width: 370px;
+}
+
+.product-content {
+    flex-grow: 1; /* Allow content to grow and take up space */
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center; /* Center items */
+}
+
+.product img {
+    width: 50%; /* Make the image responsive */
+    height: 50%; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth zoom effect */
+    margin-bottom: 2rem;
+}
+
+.product h3 {
+    margin: 0rem 0;
+}
+.product p {
+    margin: 0rem 0; 
+}
+
+.product button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    width: 100%; /* Make the button full width */
+}
+
+.product button:hover {
+    background-color: #e5554f;
+}
+
+/* Contact Section */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+/* Cart Button */
+#cart-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cart-button:hover {
+    background-color: #e5554f;
+}
+
+
+.product:hover .product-image {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+.contact-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.contact-section:hover {
+    transform: scale(1.02);
+}
+
+.contact-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
