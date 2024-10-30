@@ -18,7 +18,7 @@
             <!-- Cart items will be dynamically inserted here -->
         </div>
         <div class="cart-total">
-            <h3>Total: $<span id="total-amount">0</span></h3>
+            <h3>Total: ₹<span id="total-amount">0</span></h3>
             <button onclick="clearCart()" class="clear-cart-button">Clear Cart</button>
             <button onclick="checkout()" class="checkout-button">Proceed to Checkout</button>
         </div>
@@ -31,16 +31,43 @@
         // Function to display cart items
         function displayCart() {
             const cartItemsDiv = document.getElementById('cart-items');
+            const totalAmountSpan = document.getElementById('total-amount');
+
+            // Clear previous cart items
+            cartItemsDiv.innerHTML = '';
+
+            // Check if the cart is empty
             if (cart.length === 0) {
                 cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+                totalAmountSpan.textContent = '0';
                 return;
             }
-            cartItemsDiv.innerHTML = ''; // Clear existing items
-            cart.forEach(item => {
+
+            let totalAmount = 0;
+
+            // Iterate through cart items and create HTML elements
+            cart.forEach((item, index) => {
                 const itemDiv = document.createElement('div');
-                itemDiv.textContent = `${item.item} - $${item.price}`;
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <span>${item.item} - ₹${item.price}</span>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
                 cartItemsDiv.appendChild(itemDiv);
+
+                // Accumulate the total amount
+                totalAmount += item.price;
             });
+
+            // Update total amount in the cart
+            totalAmountSpan.textContent = totalAmount;
+        }
+
+        // Function to remove an item from the cart
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove item at the specified index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
+            displayCart(); // Refresh the display
         }
 
         // Function to clear the cart
@@ -48,6 +75,12 @@
             cart = [];
             localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
             displayCart(); // Refresh the display
+        }
+
+        // Function to proceed to checkout
+        function checkout() {
+            alert("Proceeding to checkout...");
+            // Implement your checkout logic here
         }
 
         // Display cart items on page load

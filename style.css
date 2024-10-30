@@ -16,15 +16,12 @@ body {
     color: white;
     position: relative;
     padding: 4rem 0;
-    overflow: hidden;
 }
-
-
 
 .hero-section h1 {
     font-size: 3.5rem; /* Larger font size */
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background-color: #e5554f;
     padding: 1.5rem;
 }
@@ -32,11 +29,12 @@ body {
 .hero-section p {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 300; /* Lighter font weight */
+    font-weight: 300;
     text-shadow: 1px 1px 3px rgba(1, 0, 0, 0.5);
     -webkit-text-fill-color: black;
 }
 
+/* Call to Action Button */
 .cta-button {
     background-color: #ff6f61;
     color: white;
@@ -44,7 +42,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
-    font-size: 1.2rem; /* Slightly larger font for the button */
+    font-size: 1.2rem;
 }
 
 .cta-button:hover {
@@ -78,18 +76,16 @@ body {
     padding: 2rem;
     text-align: center;
     background-color: #f2f2f2;
-    height: auto;
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
-    height: 500px; /* Remove fixed height for flexibility */
-    gap: 60px;
-    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
+/* Product Card */
 .product {
     display: flex;
     flex-direction: column;
@@ -101,31 +97,11 @@ body {
     transition: transform 0.3s;
     padding: 1rem;
     text-align: center;
-    aspect-ratio: 4 / 3; /* Maintain a 5:3 aspect ratio */
-    width: 100%; /* Set to 100% of the parent container */
-    max-width: 370px;
-}
-
-.product-content {
-    flex-grow: 1; /* Allow content to grow and take up space */
-    display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    justify-content: center; /* Center items */
 }
 
 .product img {
-    width: 50%; /* Make the image responsive */
-    height: 50%; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth zoom effect */
-    margin-bottom: 2rem;
-}
-
-.product h3 {
-    margin: 0rem 0;
-}
-.product p {
-    margin: 0rem 0; 
+    width: 100%; /* Make the image responsive */
+    border-radius: 8px;
 }
 
 .product button {
@@ -135,33 +111,10 @@ body {
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: auto;
-    width: 100%; /* Make the button full width */
 }
 
 .product button:hover {
     background-color: #e5554f;
-}
-
-/* Contact Section */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-label {
-    display: block;
-    margin-top: 1rem;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
 }
 
 /* Cart Button */
@@ -175,84 +128,33 @@ input, textarea {
     transition: background-color 0.3s;
 }
 
-#cart-button:hover {
-    background-color: #e5554f;
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .hero-section p {
+        font-size: 1.2rem; /* Smaller paragraph size */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .product-grid {
+        padding: 10px;
+    }
 }
 
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 0; /* Adjust padding */
+    }
 
-.product:hover .product-image {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-
-.contact-section {
-    padding: 20px;
-    max-width: 600px;
-    margin: 40px auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.contact-section:hover {
-    transform: scale(1.02);
-}
-
-.contact-section h2 {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 24px;
-}
-
-.contact-section p {
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-input:focus, textarea:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    .cta-button {
+        padding: 0.5rem 1rem; /* Adjust button size */
+        font-size: 1rem; /* Adjust font size */
+    }
 }
